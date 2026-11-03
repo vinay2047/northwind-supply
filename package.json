@@ -1,0 +1,27 @@
+{
+  "name": "northwind-supply",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Northwind Supply — a B2B workspace-supply storefront built with Node, Express and React.",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c yellow,cyan \"node --watch server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "demo": "npm run build && npm start"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "vite": "^6.0.5"
+  }
+}
